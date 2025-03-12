@@ -1,162 +1,82 @@
 Step 1: Understand the Project Requirements
-Before diving into coding, make sure you fully understand what the project requires:
-
 Login Page: You need to create a login page that authenticates users using either their username or email and password.
-
 Profile Page: After logging in, the user should see their profile page with at least three pieces of information (e.g., XP amount, grades, skills, etc.).
-
 Statistics Section: You must create at least two SVG-based graphs to visualize data (e.g., XP over time, audit ratio, etc.).
-
 Hosting: Once the project is complete, you need to host it on a platform like GitHub Pages, Netlify, etc.
 
 Step 2: Set Up Your React Project
-Create a React App: Use create-react-app or any other React boilerplate to set up your project.
-
-Install Dependencies: Install necessary libraries like:
-
+Install Dependencies
 axios or fetch for making API requests.
-
 react-router-dom for routing (login page, profile page).
-
 jwt-decode to decode the JWT token.
-
 Any SVG library or charting library if you don’t want to manually create SVG graphs.
 
 Step 3: Create the Login Page
 Design the Login Form:
-
 Create a form with fields for username/email and password.
-
 Add a submit button to trigger the login process.
-
 Handle Authentication:
-
 When the form is submitted, make a POST request to the signin endpoint (https://((DOMAIN))/api/auth/signin) using Basic Authentication.
-
 Encode the username/email and password in Base64 and send it in the request headers.
-
 If successful, the API will return a JWT token. Store this token securely (e.g., in localStorage or sessionStorage).
-
 If authentication fails, display an error message to the user.
-
 Logout Functionality:
-
 Provide a logout button that clears the stored JWT token and redirects the user to the login page.
 
 Step 4: Fetch Data from the GraphQL API
 Set Up GraphQL Queries:
-
 Write GraphQL queries to fetch the data you need (e.g., user info, XP, grades, audits, etc.).
-
 Use tools like GraphiQL or Postman to test your queries before implementing them in your app.
-
 Make Authenticated Requests:
-
 Use the stored JWT token to authenticate your GraphQL requests.
-
 Include the token in the Authorization header as a Bearer token.
-
 Use axios or fetch to send the GraphQL queries to the endpoint (https://((DOMAIN))/api/graphql-engine/v1/graphql).
 
 Step 5: Design the Profile Page
 Display User Information:
-
 Use the data fetched from the GraphQL API to display at least three pieces of information (e.g., username, XP amount, skills, etc.).
-
 Organize the information in a clean and visually appealing way.
-
 Create the Statistics Section:
-
 Use SVG to create at least two graphs. Examples:
-
 A line chart showing XP earned over time.
-
 A bar chart showing PASS/FAIL ratios for projects.
-
 Ensure the graphs are interactive or animated if possible.
-
 UI Design:
-
 Follow good UI/UX principles (e.g., consistent spacing, readable fonts, intuitive navigation).
-
 Use a CSS framework like Bootstrap or Tailwind if needed.
 
 Step 6: Implement SVG Graphs
 Choose Graph Types:
-
 Decide on the types of graphs you want to create (e.g., line chart, bar chart, pie chart).
-
 Create SVG Elements:
-
 Use SVG elements like <line>, <rect>, <circle>, and <text> to build your graphs.
-
 Use JavaScript to dynamically update the graph data based on the fetched information.
-
 Add Interactivity:
-
 Add hover effects, tooltips, or animations to make the graphs more engaging.
 
 Step 7: Handle Routing
 Set Up Routes:
-
 Use react-router-dom to create routes for the login page and profile page.
-
 Protect the profile page so that only authenticated users can access it.
-
 Redirect Users:
-
 Redirect users to the profile page after successful login.
-
 Redirect users to the login page if they try to access the profile page without being authenticated.
 
 Step 8: Test Your Application
 Test Authentication:
-
 Ensure the login page works with both username and email.
-
 Test error handling for invalid credentials.
-
 Test GraphQL Queries:
-
 Verify that all required data is fetched and displayed correctly.
-
 Test UI/UX:
-
 Check that the profile page is responsive and looks good on different screen sizes.
-
 Ensure the graphs are functional and visually appealing.
 
 Step 9: Host Your Application
 Choose a Hosting Platform:
-
 Options include GitHub Pages, Netlify, Vercel, etc.
-
 Deploy Your App:
-
 Build your React app using npm run build.
-
 Follow the hosting platform’s instructions to deploy your app.
-
 Test the Live Version:
-
 Ensure everything works as expected in the live environment.
-
-Step 10: Document Your Work
-Write a README:
-
-Include instructions on how to set up and run the project locally.
-
-Describe the features and technologies used.
-
-Add Comments to Your Code:
-
-Comment your code to explain complex logic or important steps.
-
-Additional Tips
-Plan Your UI: Use tools like Figma or Adobe XD to design your UI before coding.
-
-Break Down Tasks: Divide the project into smaller tasks and tackle them one at a time.
-
-Use Version Control: Commit your code regularly to GitHub to track progress and avoid losing work.
-
-By following these steps, you’ll be able to build your GraphQL-based profile page with React. Good luck! Let me know if you need further clarification on any step.
