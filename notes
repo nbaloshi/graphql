@@ -25,12 +25,12 @@ Provide a logout button that clears the stored JWT token and redirects the user 
 
 Step 4: Fetch Data from the GraphQL API
 Set Up GraphQL Queries:
-Write GraphQL queries to fetch the data you need (e.g., user info, XP, grades, audits, etc.).
+Write GraphQL queries to fetch the data you need which are Basic User Identification, XP Amount, Skills and audit.
 Use tools like GraphiQL or Postman to test your queries before implementing them in your app.
 Make Authenticated Requests:
 Use the stored JWT token to authenticate your GraphQL requests.
 Include the token in the Authorization header as a Bearer token.
-Use axios or fetch to send the GraphQL queries to the endpoint (https://((DOMAIN))/api/graphql-engine/v1/graphql).
+Use fetch to send the GraphQL queries to the endpoint (https://((DOMAIN))/api/graphql-engine/v1/graphql).
 
 Step 5: Design the Profile Page
 Display User Information:

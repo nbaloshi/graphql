@@ -1,0 +1,72 @@
+.xp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.xp-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.xp-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.xp-label {
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.xp-amount {
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.xp-graph {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.graph-container {
+    width: 100%;
+    min-height: 400px;  /* Set minimum height */
+    margin-top: 1rem;
+}
+
+.graph-container svg {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+.axis {
+    stroke: #e2e8f0;
+    stroke-width: 2;
+}
+
+.xp-path {
+    fill: none;
+    stroke: #4299e1;
+    stroke-width: 3;
+}
+
+.xp-point {
+    fill: #4299e1;
+    transition: r 0.2s ease;
+}
+
+.xp-point:hover {
+    r: 8;
+    fill: #2b6cb0;
+}

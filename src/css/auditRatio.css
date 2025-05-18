@@ -1,0 +1,122 @@
+.audit-ratio-container {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.audit-ratio-container:hover {
+    transform: translateY(-5px);
+}
+
+.audit-header {
+    margin-bottom: 2rem;
+}
+
+.audit-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.audit-subtitle {
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+.audit-ratio-value {
+    font-size: 10rem;
+    font-weight: 700;
+    color: #4299e1;
+    margin: 1.5rem 0;
+    text-align: center;
+    line-height: 1;
+}
+
+@media (max-width: 968px) {
+    .audit-ratio-value {
+        font-size: 8rem;
+    }
+}
+
+.chart-container {
+    height: 350px;
+    margin: 2rem 0;
+}
+
+.audit-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.audit-footer-text {
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+.audit-icon {
+    color: #4299e1;
+}
+
+/* Loading state */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.loading-text {
+    font-size: 1rem;
+    color: #718096;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.loading-text::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(66, 153, 225, 0.3);
+    border-top-color: #4299e1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Error state */
+.error-container {
+    padding: 1rem;
+    background: #fff5f5;
+    border-radius: 0.5rem;
+    color: #e53e3e;
+}
+
+.error-text {
+    font-size: 0.875rem;
+}
+
+/* Tooltip customization */
+.audit-tooltip {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.audit-tooltip p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #2d3748;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

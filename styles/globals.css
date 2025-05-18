@@ -1,0 +1,137 @@
+:root {
+  --max-width: 100%;
+  --font-size-base: 14px;
+  --container-padding: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove debug outline */
+* {
+  outline: none;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 var(--container-padding);
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.1rem; }
+p { font-size: 0.9rem; }
+
+.mobile-header {
+  background: #1a1a1a;
+  color: white;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.mobile-nav {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  background: #f0f0f0;
+  overflow-x: auto;
+}
+
+.mobile-nav button {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  border: none;
+  background: white;
+  border-radius: 20px;
+}
+
+.card {
+  background: white;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.screen-size::after {
+  content: 'Desktop';
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 0.5rem;
+  }
+  .container {
+    padding: 0 var(--container-padding);
+    max-width: 100%;
+  }
+  html {
+    font-size: 14px;
+  }
+  .screen-size::after {
+    content: 'Mobile (<480px)';
+  }
+  h1 { font-size: 1.25rem; }
+  h2 { font-size: 1.1rem; }
+  h3 { font-size: 1rem; }
+  p { font-size: 0.875rem; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 0 var(--container-padding);
+    max-width: 100%;
+  }
+  .screen-size::after {
+    content: 'Tablet (481-768px)';
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    padding: 0 var(--container-padding);
+    max-width: 1024px;
+  }
+}
+
+/* Responsive utilities */
+.show-on-mobile {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  .show-on-mobile {
+    display: block;
+  }
+}

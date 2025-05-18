@@ -1,0 +1,26 @@
+.radar-card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.radar-container {
+    aspect-ratio: 1 / 1;
+    max-height: 350px;
+    padding: 1.5rem;
+}
+
+.radar-header {
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+
+.radar-footer {
+    padding: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+}

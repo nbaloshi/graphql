@@ -1,0 +1,224 @@
+.profile-container {
+    min-height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.profile-header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-content {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-content {
+    max-width: 1800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-areas: 
+        "user graph audit"
+        "xp xp xp"
+        "skills skills skills";
+    grid-template-columns: minmax(300px, 400px) 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.profile-grid section {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1.5rem;
+    min-width: 300px;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.profile-grid section::-webkit-scrollbar {
+    height: 6px;
+}
+
+.profile-grid section::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.profile-grid section::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.user-section {
+    grid-area: user;
+    height: fit-content;
+    max-height: 600px; 
+}
+
+.skills-section {
+    grid-area: skills;
+    height: auto;
+    min-height: 700px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.audit-ratio {
+    grid-area: audit;
+    height: auto;
+    min-height: 320px;
+}
+
+.skills-graph {
+    grid-area: graph;
+    height: auto;
+    min-height: 450px;
+}
+
+.xp-section {
+    grid-area: xp;
+    height: auto;
+    min-height: 350px;
+}
+
+.profile-grid section:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 1600px) {
+    .profile-grid {
+        grid-template-areas: 
+            "user graph audit"
+            "xp xp xp"
+            "skills skills skills";
+        grid-template-columns: 400px 1fr 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .profile-grid {
+        grid-template-areas: 
+            "user graph"
+            "user audit"
+            "xp xp"
+            "skills skills";
+        grid-template-columns: minmax(250px, 350px) 1fr;
+        gap: 1rem;
+    }
+
+    .skills-section {
+        min-height: 600px;
+        max-width: 750px;
+    }
+
+    .audit-ratio {
+        min-height: 300px;
+    }
+
+    .skills-graph {
+        min-height: 400px;
+    }
+
+    .xp-section {
+        min-height: 300px;
+    }
+
+    .header-content {
+        padding: 0 1rem;
+    }
+
+    .profile-content {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-areas: 
+            "user"
+            "graph"
+            "audit"
+            "xp"
+            "skills";
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .profile-grid section {
+        width: 100%;
+        max-width: 95%;
+        min-height: auto;
+        padding: 1rem;
+        transform: none;
+    }
+
+    .skills-section {
+        min-height: 250px;
+        transform: scale(0.9);
+    }
+
+    .audit-ratio {
+        min-height: 180px;
+    }
+
+    .skills-graph {
+        min-height: 220px;
+    }
+
+    .xp-section {
+        min-height: 180px;
+    }
+
+    .profile-content {
+        padding: 0.5rem;
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-grid {
+        padding: 0.25rem;
+    }
+
+    .profile-grid section {
+        transform: scale(0.9);
+        margin: 0 auto;
+        min-height: auto;
+    }
+
+    .skills-section {
+        min-height: 200px;
+        transform: scale(0.85);
+    }
+
+    .audit-ratio,
+    .skills-graph,
+    .xp-section {
+        min-height: 150px;
+        transform: scale(0.85);
+    }
+}

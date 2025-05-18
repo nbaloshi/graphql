@@ -1,0 +1,50 @@
+.card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-[px] {
+    height: 350px;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.border-t {
+    border-top: 1px solid #e2e8f0;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+.text-gray-600 {
+    color: #4b5563;
+}
+
+.text-blue-500 {
+    color: #3b82f6;
+}
