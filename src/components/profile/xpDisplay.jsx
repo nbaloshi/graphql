@@ -3,7 +3,6 @@ import { fetchGraphQL } from "../../services/graphqlService";
 import { GET_XP_DATA } from "../../queries/xpQueries";
 import { TrendingUp } from "lucide-react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip } from "recharts";
-import { ResponsiveContainer } from 'recharts';
 import { Card } from "../ui/card";
 
 const XpDisplay = () => {
